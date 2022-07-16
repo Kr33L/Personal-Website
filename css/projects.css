@@ -1,0 +1,15 @@
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 20px 20px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.hide {
+  display:none;
+}

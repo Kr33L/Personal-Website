@@ -1,0 +1,52 @@
+* {
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+
+body {
+  background-color: #242424;
+  max-width: 960px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 20px 20px;
+}
+.main-grid hr {
+  max-width: 50%;
+}
+
+.main-grid > .grid-item {
+  border: 10px ridge #242420;
+  box-shadow: 0px 0px 4px 0px #ffa500;
+}
+.main-grid > .grid-item > h2,
+h3 {
+  text-align: center;
+}
+
+.left-column {
+  grid-area: 1 / 1 / 5 / 2;
+}
+.right-column-1 {
+  grid-area: 1 / 2 / 3 / 3;
+}
+.right-column-2 {
+  grid-area: 3 / 2 / 5 / 3;
+}
+.bottom-footer {
+  grid-area: 5 / 1 / 7 / 3;
+}
+
+.left-column li {
+  font-size: 20px;
+}
+
+.left-column li::marker {
+  font-size: 2rem;
+  animation: left-list 3s ease-in-out infinite;
+}

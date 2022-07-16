@@ -1,0 +1,9 @@
+@keyframes left-list {
+  0%, 100% {
+    color: #ffa500;
+  }
+
+  50% {
+    color: limegreen;
+  }
+}
