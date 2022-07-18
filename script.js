@@ -1,17 +1,17 @@
-function toggleDescription(event) {
+function toggleHeader(event) {
   const button = document.getElementById(event.target.id);
-  const mapDescId = `card-description-${event.target.id.slice(-1)}`;
-  const descText = document.getElementById(mapDescId);
+  const mapDescId = `card-${event.target.id.slice(-1)}`;
+  const header = document.getElementById(mapDescId);
 
   if (!button) {
     alert("This is a button, a button without an id...")
   }
 
-  descText.classList.toggle('hide');
+  header.classList.toggle('size-up');
 }
 
-const buttons = document.querySelectorAll(".toggle");
-console.log(buttons);
-for (let i = 0; i < buttons.length; i++) {
-  buttons[i].addEventListener("click", toggleDescription);
+const images = document.querySelectorAll(".image-in-gallery");
+console.log(images);
+for (let i = 0; i < images.length; i++) {
+  images[i].addEventListener("click", toggleHeader);
 }

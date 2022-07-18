@@ -1,32 +1,47 @@
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: "Verdana", sans-serif;
   color: white;
 }
 
 body {
   background-color: #242424;
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
   margin-top: 10px;
 }
 
-.main-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  grid-gap: 20px 20px;
-}
-.main-grid hr {
+hr {
   max-width: 50%;
 }
 
-.main-grid > .grid-item {
-  border: 10px ridge #242420;
-  box-shadow: 0px 0px 4px 0px #ffa500;
+li {
+  font-size: 16px;
 }
-.main-grid > .grid-item > h2,
-h3 {
+
+li::marker {
+  font-size: 2em;
+  animation: left-list 3s ease-in-out infinite;
+}
+
+.header-alignment {
   text-align: center;
+  color: orange;
+  text-shadow: 0 10px black;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 10px 10px;
+}
+
+.grid-item {
+  padding: 0 20px;
+  background-color: #242420;
+  border: 25px ridge #242420;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px 0px black;
 }
 
 .left-column {
@@ -42,11 +57,9 @@ h3 {
   grid-area: 5 / 1 / 7 / 3;
 }
 
-.left-column li {
-  font-size: 20px;
-}
-
-.left-column li::marker {
-  font-size: 2rem;
-  animation: left-list 3s ease-in-out infinite;
+@media screen and (max-width: 768px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
 }

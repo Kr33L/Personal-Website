@@ -1,15 +1,32 @@
 .project-gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-gap: 20px 20px;
+  grid-template-rows: repeat(1, 1fr);
+  grid-gap: 10px 10px;
 }
-
 .card-body {
   display: flex;
   flex-direction: column;
 }
 
-.hide {
-  display:none;
+.card-body > h2 {
+  background-color: rgba(0, 0, 0, 0.2);
+  max-width: 450px;
+  text-align: center;
+}
+
+.card-body .image-in-gallery {
+  max-width: 450px;
+  object-fit: cover;
+}
+.card-body > img:hover {
+  cursor: pointer;
+}
+
+.size-up {
+  transition: 1s;
+  transform: scale(2);
+  text-shadow: 0 5px black;
+  margin: 0 auto;
+  outline: none;
 }

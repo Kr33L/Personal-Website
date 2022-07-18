@@ -1,5 +1,6 @@
 @keyframes left-list {
-  0%, 100% {
+  0%,
+  100% {
     color: #ffa500;
   }
 
