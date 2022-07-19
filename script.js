@@ -1,7 +1,7 @@
 function toggleHeader(event) {
   const button = document.getElementById(event.target.id);
-  const mapDescId = `card-${event.target.id.slice(-1)}`;
-  const header = document.getElementById(mapDescId);
+  const mapId = `card-${event.target.id.slice(-1)}`;
+  const header = document.getElementById(mapId);
 
   if (!button) {
     alert("This is a button, a button without an id...")

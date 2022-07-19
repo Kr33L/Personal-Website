@@ -12,15 +12,26 @@ body {
 
 hr {
   max-width: 50%;
+  margin: 0 auto;
 }
 
 li {
   font-size: 16px;
+  text-align: center;
+  background-color: rgba(73, 73, 64, 0.2);
+  margin: 10px auto;
+  width: 75%;
+  border-radius: 25px;
 }
 
 li::marker {
   font-size: 2em;
-  animation: left-list 3s ease-in-out infinite;
+  animation: bullet-pulse 3s ease-in-out infinite;
+}
+
+p {
+  background-color: rgba(73, 73, 64, 0.2);
+  border-radius: 25px;
 }
 
 .header-alignment {
@@ -34,14 +45,15 @@ li::marker {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 1fr);
   grid-gap: 10px 10px;
+  margin: 50px 0;
 }
 
 .grid-item {
   padding: 0 20px;
   background-color: #242420;
-  border: 25px ridge #242420;
+  border: 15px ridge #242420;
   border-radius: 20px;
-  box-shadow: 0px 0px 20px 0px black;
+  box-shadow: 0px 0px 40px 0px black;
 }
 
 .left-column {
@@ -59,6 +71,10 @@ li::marker {
 
 @media screen and (max-width: 768px) {
   .grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .project-gallery {
     display: flex;
     flex-direction: column;
   }

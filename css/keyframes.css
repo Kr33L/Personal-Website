@@ -1,4 +1,4 @@
-@keyframes left-list {
+@keyframes bullet-pulse {
   0%,
   100% {
     color: #ffa500;
@@ -6,5 +6,16 @@
 
   50% {
     color: limegreen;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    outline: 4px solid black;
+  }
+
+  100% {
+    outline: 4px solid orange;
+    border-radius: 10px;
   }
 }

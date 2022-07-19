@@ -4,6 +4,7 @@
   grid-template-rows: repeat(1, 1fr);
   grid-gap: 10px 10px;
 }
+
 .card-body {
   display: flex;
   flex-direction: column;
@@ -15,17 +16,24 @@
   text-align: center;
 }
 
-.card-body .image-in-gallery {
+.image-in-gallery {
   max-width: 450px;
   object-fit: cover;
 }
-.card-body > img:hover {
+
+.image-in-gallery:hover {
   cursor: pointer;
+  animation: pulse 1s ease-in infinite;
+  animation-direction: alternate;
 }
 
 .size-up {
-  transition: 1s;
+  transition: 2s;
   transform: scale(2);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px 10px;
+  border-radius: 30px;
+  border: 2px solid black;
   text-shadow: 0 5px black;
   margin: 0 auto;
   outline: none;
